@@ -77,8 +77,8 @@
         maxZoom: 20,
         minZoom: 10,
       }).fitBounds([
-        [-5.42212235952752, 105.2184128628163],
-        [-5.374604975171494, 105.3046985083863],
+        [-5.466955166350195, 105.18817555685943],
+        [-5.371923715857101, 105.36074684799942],
       ]);
       var hash = new L.Hash(map);
       map.attributionControl.setPrefix(
@@ -124,7 +124,7 @@
         var popupContent =
           '<table>\
                     <tr>\
-                        <td colspan="2" style="text-align:center; ">' +
+                        <td colspan="2" style="text-align:center;background-color:aqua;color:black;padding:10px;border-radius:10px;font-weight:bold;" >' +
           (feature.properties["nama_bel"] !== null
             ? autolinker.link(feature.properties["nama_bel"].toLocaleString())
             : "") +
@@ -137,7 +137,14 @@
               String(feature.properties["foto"])
                 .replace(/[\\\/:]/g, "_")
                 .trim() +
-              '" style="width: 250px; height: auto;">'
+              '" style="width: 250px; height: auto; border-radius:15px;">'
+            : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" style="text-align:center;background-color:aqua;color:black;padding:10px;border-radius:10px;font-weight:bold;" ><strong>Keterangan</strong><br />' +
+          (feature.properties["Keterangan"] !== null
+            ? autolinker.link(feature.properties["Keterangan"].toLocaleString())
             : "") +
           "</td>\
                     </tr>\
@@ -318,7 +325,7 @@
           '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' +
+                        <td colspan="2"><strong>WADKC2</strong><br />' +
           (feature.properties["WADKC2"] !== null
             ? autolinker.link(feature.properties["WADKC2"].toLocaleString())
             : "") +
@@ -346,7 +353,7 @@
           '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>WAPRO2</strong><br />' +
+                        <td colspan="2">' +
           (feature.properties["WAPRO2"] !== null
             ? autolinker.link(feature.properties["WAPRO2"].toLocaleString())
             : "") +
