@@ -1,4 +1,5 @@
-# Web GIS Pusat Belanja Umum-Bandar Lampung | Ryan Ernanda - 120140154
+# Web GIS Pusat Belanja Umum | Bandar Lampung
+Ryan Ernanda - 120140154
 
 ## Tools
 - QGis
